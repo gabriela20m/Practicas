@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web Mejorada</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Cambia la ruta según la ubicación del archivo CSS -->
+</head>
+<body>
+    <header>
+        <h1>¡Hola, Mundo!</h1>
+    </header>
+
+    <!-- Párrafo de introducción -->
+    <p>Esta es mi primera página web con elementos adicionales y mejor diseño.</p>
+
+    <!-- Lista de elementos -->
+    <h2>Mis Hobbies</h2>
+    <ul>
+        <li onclick="toggleList('leer')">Leer
+            <ul id="leer">
+                <li>Escuchar música</li>
+                <li>Leer</li>
+                <li>Bailar</li>
+            </ul>
+        </li>
+        <li onclick="toggleList('programar')">Programar
+            <ul id="programar">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+            </ul>
+        </li>
+        <li onclick="toggleList('jugar')">Jugar
+            <ul id="jugar">
+                <li>Minecraft</li>
+                <li>Hay Day</li>
+                <li>Call of Duty</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Enlace a un sitio externo -->
+    <h2>Visita Mi IG</h2>
+    <p>Para más información sobre mí, visita <a href="https://www.instagram.com/g__abs403/?igsh=MWxobGc1eXJkY2kwdg%3D%3D" target="_blank">Instagram</a>.</p>
+
+    <!-- Imagen -->
+    <h2>Mi Imagen Favorita</h2>
+    <img src="imagenes/mi-imagen-favorita.jpg" alt="Descripción de la imagen" width="300">
+
+    <!-- Video -->
+    <h2>Mi Video Favorito</h2>
+    <video width="320" height="240" controls>
+        <source src="videos/mi-video-favorito.mp4" type="video/mp4">
+    </video>
+
+    <!-- Tabla -->
+    <h2>Mi Horario</h2>
+    <table>
+        <tr>
+            <th>Día</th>
+            <th>Actividad</th>
+        </tr>
+        <tr>
+            <td>Lunes</td>
+            <td>Estudiar</td>
+        </tr>
+        <tr>
+            <td>Martes</td>
+            <td>Jugar</td>
+        </tr>
+        <tr>
+            <td>Miércoles</td>
+            <td>Estudiar</td>
+        </tr>
+    </table>
+
+    <!-- Botón de interacción -->
+    <div style="text-align: center; margin: 20px 0;">
+        <button class="button" onclick="alert('¡Gracias por visitar mi página!')">Haz clic aquí</button>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Mi Página Web Mejorada Gabs</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
