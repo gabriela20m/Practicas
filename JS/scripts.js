@@ -1,8 +1,15 @@
+// scripts.js
+
+function showAlert() {
+    alert('¡Gracias por visitar mi página!');
+}
+
+// Ejemplo de función para alternar la visibilidad de las listas
 function toggleList(id) {
-    var list = document.getElementById(id);
-    if (list.style.display === "none" || list.style.display === "") {
-        list.style.display = "block";
+    const element = document.getElementById(id);
+    if (element.style.display === 'none') {
+        element.style.display = 'block';
     } else {
-        list.style.display = "none";
+        element.style.display = 'none';
     }
 }

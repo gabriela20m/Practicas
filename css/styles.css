@@ -118,18 +118,18 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #020202;
 }
 
 th, td {
     padding: 10px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #c0adad;
 }
 
 th {
-    background-color: #ff7f50;
-    color: white;
+    background-color: #cbff50;
+    color: rgb(102, 100, 100);
 }
 
 .button {
