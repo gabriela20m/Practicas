@@ -4,85 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web Mejorada</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Asegúrate de que esta ruta es correcta -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <h1>¡Hola, Mundo!</h1>
+<body class="FondoPrincipal">
+    <header class="Encabezado">
+        <h1 class="TituloPrincipal">¡Hola, Mundo!</h1>
     </header>
 
-    <!-- Párrafo de introducción -->
-    <p>Esta es mi primera página web con elementos adicionales y mejor diseño.</p>
+    <main class="ContenidoPrincipal">
+        <!-- Párrafo de introducción -->
+        <p class="ParrafoIntroduccion">Esta es mi primera página web con elementos adicionales y mejor diseño.</p>
 
-    <!-- Lista de elementos -->
-    <h2>Mis Hobbies</h2>
-    <ul>
-        <li onclick="toggleList('leer')">Leer
-            <ul id="leer">
-                <li>Escuchar música</li>
-                <li>Leer</li>
-                <li>Bailar</li>
+        <!-- Lista de elementos -->
+        <h2 class="Subtitulo">Mis Hobbies</h2>
+        <div class="ContenedorListas">
+            <button class="BotonLista" onclick="toggleList('leer')">Leer</button>
+            <ul id="leer" class="SubLista">
+                <li class="ItemSubLista">Escuchar música</li>
+                <li class="ItemSubLista">Leer</li>
+                <li class="ItemSubLista">Bailar</li>
             </ul>
-        </li>
-        <li onclick="toggleList('programar')">Programar
-            <ul id="programar">
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>HTML/CSS</li>
+
+            <button class="BotonLista" onclick="toggleList('programar')">Programar</button>
+            <ul id="programar" class="SubLista">
+                <li class="ItemSubLista">Python</li>
+                <li class="ItemSubLista">JavaScript</li>
+                <li class="ItemSubLista">HTML/CSS</li>
             </ul>
-        </li>
-        <li onclick="toggleList('jugar')">Jugar
-            <ul id="jugar">
-                <li>Minecraft</li>
-                <li>Hay Day</li>
-                <li>Call of Duty</li>
+
+            <button class="BotonLista" onclick="toggleList('jugar')">Jugar</button>
+            <ul id="jugar" class="SubLista">
+                <li class="ItemSubLista">Minecraft</li>
+                <li class="ItemSubLista">Hay Day</li>
+                <li class="ItemSubLista">Call of Duty</li>
             </ul>
-        </li>
-    </ul>
+        </div>
 
-    <!-- Enlace a un sitio externo -->
-    <h2>Visita Mi IG</h2>
-    <p>Para más información sobre mí, visita <a href="https://www.instagram.com/g__abs403/?igsh=MWxobGc1eXJkY2kwdg%3D%3D" target="_blank">Instagram</a>.</p>
+        <!-- Enlace a un sitio externo -->
+        <h2 class="Subtitulo">Visita Mi IG</h2>
+        <p class="ParrafoEnlace">Para más información sobre mí, visita <a href="https://www.instagram.com/g__abs403/?igsh=MWxobGc1eXJkY2kwdg%3D%3D" target="_blank" class="EnlaceExterno">Instagram</a>.</p>
 
-    <!-- Imagen -->
-    <h2>Mi Imagen Favorita</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtVc_g_eDRLN9x36S95XbOKI9y6YG_TgBpoUGp_VYWdWts0nMKz62O4d05s9vGCfHcATU&usqp=CAU" alt="Descripción de la imagen" width="300">
+        <!-- Imagen -->
+        <h2 class="Subtitulo">Mi Imagen Favorita</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtVc_g_eDRLN9x36S95XbOKI9y6YG_TgBpoUGp_VYWdWts0nMKz62O4d05s9vGCfHcATU&usqp=CAU" alt="Descripción de la imagen" width="300" class="ImagenFavorita">
 
-    <!-- Video -->
-    <h2>Mi Video Favorito</h2>
-    <video width="320" height="240" controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Tu navegador no soporta el formato de video.
-    </video>
+        <!-- Video -->
+        <h2 class="Subtitulo">Mi Video Favorito</h2>
+        <video width="320" height="240" controls class="VideoFavorito">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+        </video>
 
-    <!-- Tabla -->
-    <h2>Mi Horario</h2>
-    <table>
-        <tr>
-            <th>Día</th>
-            <th>Actividad</th>
-        </tr>
-        <tr>
-            <td>Lunes</td>
-            <td>Estudiar</td>
-        </tr>
-        <tr>
-            <td>Martes</td>
-            <td>Jugar</td>
-        </tr>
-        <tr>
-            <td>Miércoles</td>
-            <td>Estudiar</td>
-        </tr>
-    </table>
+        <!-- Tabla -->
+        <h2 class="Subtitulo">Mi Horario</h2>
+        <table class="TablaHorario">
+            <tr>
+                <th class="TablaEncabezado">Día</th>
+                <th class="TablaEncabezado">Actividad</th>
+            </tr>
+            <tr>
+                <td class="TablaDato">Lunes</td>
+                <td class="TablaDato">Estudiar</td>
+            </tr>
+            <tr>
+                <td class="TablaDato">Martes</td>
+                <td class="TablaDato">Jugar</td>
+            </tr>
+            <tr>
+                <td class="TablaDato">Miércoles</td>
+                <td class="TablaDato">Estudiar</td>
+            </tr>
+        </table>
 
-    <!-- Botón de interacción -->
-    <div style="text-align: center; margin: 20px 0;">
-        <button class="button" onclick="showAlert()">Haz clic aquí</button>
-    </div>
+        <!-- Botón de interacción -->
+        <div class="ContenedorBoton">
+            <button class="BotonInteraccion" onclick="showAlert()">Haz clic aquí</button>
+        </div>
+    </main>
 
     <!-- Pie de página -->
-    <footer>
+    <footer class="PieDePagina">
         <p>&copy; 2024 Mi Página Web Mejorada Gabs</p>
     </footer>
 
