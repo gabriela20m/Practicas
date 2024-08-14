@@ -9,9 +9,16 @@
 <body class="FondoPrincipal">
     <header class="Encabezado">
         <h1 class="TituloPrincipal">¡Hola, Mundo!</h1>
+        <button class="BotonModoOscuro" onclick="toggleDarkMode()">Modo Oscuro</button>
     </header>
 
     <main class="ContenidoPrincipal">
+        <!-- Sección Información Personal -->
+        <section class="InformacionPersonal">
+            <h2 class="Subtitulo">Sobre Mí</h2>
+            <p class="ParrafoInformacion">Soy Gabs, un apasionado de la programación, los videojuegos, y la música. Me encanta aprender nuevas tecnologías y crear proyectos creativos.</p>
+        </section>
+
         <!-- Párrafo de introducción -->
         <p class="ParrafoIntroduccion">Esta es mi primera página web con elementos adicionales y mejor diseño.</p>
 
@@ -52,7 +59,6 @@
         <h2 class="Subtitulo">Mi Video Favorito</h2>
         <video width="320" height="240" controls class="VideoFavorito">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Tu navegador no soporta el formato de video.
         </video>
 
         <!-- Tabla -->
@@ -75,6 +81,14 @@
                 <td class="TablaDato">Estudiar</td>
             </tr>
         </table>
+
+        <!-- Sección de Saludo Personalizado -->
+        <div class="ContenedorSaludo">
+            <h2 class="Subtitulo">¡Saludo Personalizado!</h2>
+            <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre aquí" class="CampoTexto">
+            <button class="BotonSaludo" onclick="saludarUsuario()">Saludar</button>
+            <p id="mensajeSaludo"></p>
+        </div>
 
         <!-- Botón de interacción -->
         <div class="ContenedorBoton">

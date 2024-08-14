@@ -1,12 +1,26 @@
-function showAlert() {
-    alert('¡Gracias por visitar mi página!');
+function toggleList(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === "block") {
+        element.style.display = "none";
+    } else {
+        element.style.display = "block";
+    }
 }
 
-function toggleList(id) {
-    const element = document.getElementById(id);
-    if (element.style.display === 'none' || element.style.display === '') {
-        element.style.display = 'block';
+function showAlert() {
+    alert("¡Has hecho clic en el botón!");
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+function saludarUsuario() {
+    const nombre = document.getElementById('nombreUsuario').value;
+    const mensaje = document.getElementById('mensajeSaludo');
+    if (nombre) {
+        mensaje.textContent = `¡Hola, ${nombre}! Gracias por visitar mi página.`;
     } else {
-        element.style.display = 'none';
+        mensaje.textContent = '¡Hola! Gracias por visitar mi página.';
     }
 }

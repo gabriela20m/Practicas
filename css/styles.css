@@ -1,5 +1,5 @@
 /* Estilo general del cuerpo */
-body.FondoPrincipal {
+.FondoPrincipal {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     color: #333;
@@ -7,26 +7,67 @@ body.FondoPrincipal {
     padding: 0;
 }
 
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f8ff;
+}
+
+body.dark-mode .Encabezado {
+    background-color: #333;
+    color: #f0f8ff;
+}
+
+body.dark-mode .BotonLista,
+body.dark-mode button.BotonInteraccion,
+body.dark-mode .BotonSaludo {
+    background-color: #555;
+    color: #f0f8ff;
+}
+
+body.dark-mode .ItemSubLista {
+    background-color: #444;
+}
+
+body.dark-mode footer.PieDePagina {
+    background-color: #1c1c1c;
+}
+
 /* Estilos del encabezado */
-header.Encabezado {
+.Encabezado {
     background-color: #ff7f50;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
-h1.TituloPrincipal {
+.TituloPrincipal {
     font-size: 2.5em;
 }
 
+.BotonModoOscuro {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f0f8ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.BotonModoOscuro:hover {
+    background-color: #555;
+}
+
 /* Estilo para el contenedor principal */
-main.ContenidoPrincipal {
+.ContenidoPrincipal {
     text-align: center;
     padding: 20px;
 }
 
 /* Estilo para los párrafos */
-p.ParrafoIntroduccion {
+.ParrafoIntroduccion,
+.ParrafoInformacion {
     font-size: 1.2em;
     margin: 20px 0;
 }
@@ -39,7 +80,7 @@ p.ParrafoIntroduccion {
     gap: 10px;
 }
 
-button.BotonLista {
+.BotonLista {
     background-color: #ff7f50;
     color: white;
     border: none;
@@ -49,17 +90,17 @@ button.BotonLista {
     cursor: pointer;
 }
 
-button.BotonLista:hover {
+.BotonLista:hover {
     background-color: #e6735a;
 }
 
-ul.SubLista {
+.SubLista {
     list-style-type: none;
     padding: 0;
     display: none; /* Asegúrate de que el JS funcione para mostrar/ocultar */
 }
 
-li.ItemSubLista {
+.ItemSubLista {
     margin: 5px 0;
     padding: 5px;
     background-color: #ffe4c4;
@@ -67,17 +108,17 @@ li.ItemSubLista {
 }
 
 /* Estilo del enlace */
-a.EnlaceExterno {
+.EnlaceExterno {
     color: #008b8b;
     text-decoration: none;
 }
 
-a.EnlaceExterno:hover {
+.EnlaceExterno:hover {
     text-decoration: underline;
 }
 
 /* Estilo de la imagen */
-img.ImagenFavorita {
+.ImagenFavorita {
     display: block;
     margin: 20px auto;
     border: 2px solid #ccc;
@@ -85,7 +126,7 @@ img.ImagenFavorita {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img.ImagenFavorita:hover {
+.ImagenFavorita:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -107,43 +148,76 @@ table.TablaHorario {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
+    border: 2px solid #ccc;
 }
 
-table.TablaHorario th, table.TablaHorario td {
-    border: 1px solid #ccc;
+th.TablaEncabezado,
+td.TablaDato {
     padding: 10px;
+    border: 1px solid #ccc;
     text-align: center;
 }
 
-/* Estilo del botón de interacción */
-button.BotonInteraccion {
-    display: block;
-    padding: 15px 30px;
+th.TablaEncabezado {
+    background-color: #ff7f50;
+    color: white;
+}
+
+td.TablaDato {
+    background-color: #f5f5f5;
+}
+
+/* Estilo para el contenedor de saludo personalizado */
+.ContenedorSaludo {
+    margin: 20px 0;
+}
+
+.CampoTexto {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #ff7f50;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+}
+
+.BotonSaludo {
+    margin-top: 10px;
+    padding: 10px 20px;
     background-color: #ff7f50;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1.5em;
-    margin: 20px auto;
 }
 
-button.BotonInteraccion:hover {
+.BotonSaludo:hover {
     background-color: #e6735a;
 }
 
-/* Estilos del pie de página */
-footer.PieDePagina {
-    background-color: #2f4f4f;
+/* Estilo para el botón de interacción */
+.ContenedorBoton {
+    margin: 20px 0;
+}
+
+.BotonInteraccion {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.BotonInteraccion:hover {
+    background-color: #45a049;
+}
+
+/* Estilo del pie de página */
+.PieDePagina {
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Añadir espacio inferior para evitar solapamiento con el pie de página fijo */
-body.FondoPrincipal {
-    padding-bottom: 50px;
 }
