@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web Mejorada</title>
+    <title>Mi Página Web Moderna</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="FondoPrincipal">
@@ -13,92 +13,87 @@
     </header>
 
     <main class="ContenidoPrincipal">
-        <!-- Sección Información Personal -->
-        <section class="InformacionPersonal">
-            <h2 class="Subtitulo">Sobre Mí</h2>
-            <p class="ParrafoInformacion">Soy Gabs, un apasionado de la programación, los videojuegos, y la música. Me encanta aprender nuevas tecnologías y crear proyectos creativos.</p>
+        <section class="SeccionSaludo">
+            <h2 class="Subtitulo">Saludo Personalizado</h2>
+            <div class="ContenedorSaludo">
+                <input type="text" id="nombreUsuario" class="CampoTexto" placeholder="Escribe tu nombre">
+                <button class="BotonSaludo" onclick="saludarUsuario()">Enviar</button>
+            </div>
+            <p id="mensajeSaludo" class="MensajeSaludo"></p>
         </section>
 
-        <!-- Párrafo de introducción -->
-        <p class="ParrafoIntroduccion">Esta es mi primera página web con elementos adicionales y mejor diseño.</p>
+        <section>
+            <h2 class="Subtitulo">Mis Hobbies</h2>
+            <div class="ContenedorListas">
+                <button class="BotonLista" onclick="toggleList('leer')">Leer</button>
+                <ul id="leer" class="SubLista">
+                    <li class="ItemSubLista">Escuchar música</li>
+                    <li class="ItemSubLista">Leer</li>
+                    <li class="ItemSubLista">Bailar</li>
+                </ul>
 
-        <!-- Lista de elementos -->
-        <h2 class="Subtitulo">Mis Hobbies</h2>
-        <div class="ContenedorListas">
-            <button class="BotonLista" onclick="toggleList('leer')">Leer</button>
-            <ul id="leer" class="SubLista">
-                <li class="ItemSubLista">Escuchar música</li>
-                <li class="ItemSubLista">Leer</li>
-                <li class="ItemSubLista">Bailar</li>
-            </ul>
+                <button class="BotonLista" onclick="toggleList('programar')">Programar</button>
+                <ul id="programar" class="SubLista">
+                    <li class="ItemSubLista">Python</li>
+                    <li class="ItemSubLista">JavaScript</li>
+                    <li class="ItemSubLista">HTML/CSS</li>
+                </ul>
 
-            <button class="BotonLista" onclick="toggleList('programar')">Programar</button>
-            <ul id="programar" class="SubLista">
-                <li class="ItemSubLista">Python</li>
-                <li class="ItemSubLista">JavaScript</li>
-                <li class="ItemSubLista">HTML/CSS</li>
-            </ul>
+                <button class="BotonLista" onclick="toggleList('jugar')">Jugar</button>
+                <ul id="jugar" class="SubLista">
+                    <li class="ItemSubLista">Minecraft</li>
+                    <li class="ItemSubLista">Hay Day</li>
+                    <li class="ItemSubLista">Call of Duty</li>
+                </ul>
+            </div>
+        </section>
 
-            <button class="BotonLista" onclick="toggleList('jugar')">Jugar</button>
-            <ul id="jugar" class="SubLista">
-                <li class="ItemSubLista">Minecraft</li>
-                <li class="ItemSubLista">Hay Day</li>
-                <li class="ItemSubLista">Call of Duty</li>
-            </ul>
-        </div>
+        <section>
+            <h2 class="Subtitulo">Visita Mi IG</h2>
+            <p class="ParrafoEnlace">Para más información sobre mí, visita <a href="https://www.instagram.com/g__abs403/?igsh=MWxobGc1eXJkY2kwdg%3D%3D" target="_blank" class="EnlaceExterno">Instagram</a>.</p>
+        </section>
 
-        <!-- Enlace a un sitio externo -->
-        <h2 class="Subtitulo">Visita Mi IG</h2>
-        <p class="ParrafoEnlace">Para más información sobre mí, visita <a href="https://www.instagram.com/g__abs403/?igsh=MWxobGc1eXJkY2kwdg%3D%3D" target="_blank" class="EnlaceExterno">Instagram</a>.</p>
+        <section>
+            <h2 class="Subtitulo">Mi Imagen Favorita</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtVc_g_eDRLN9x36S95XbOKI9y6YG_TgBpoUGp_VYWdWts0nMKz62O4d05s9vGCfHcATU&usqp=CAU" alt="Descripción de la imagen" class="ImagenFavorita">
+        </section>
 
-        <!-- Imagen -->
-        <h2 class="Subtitulo">Mi Imagen Favorita</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtVc_g_eDRLN9x36S95XbOKI9y6YG_TgBpoUGp_VYWdWts0nMKz62O4d05s9vGCfHcATU&usqp=CAU" alt="Descripción de la imagen" width="300" class="ImagenFavorita">
+        <section>
+            <h2 class="Subtitulo">Mi Video Favorito</h2>
+            <video class="VideoFavorito" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </section>
 
-        <!-- Video -->
-        <h2 class="Subtitulo">Mi Video Favorito</h2>
-        <video width="320" height="240" controls class="VideoFavorito">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
+        <section>
+            <h2 class="Subtitulo">Mi Horario</h2>
+            <table class="TablaHorario">
+                <tr>
+                    <th class="TablaEncabezado">Día</th>
+                    <th class="TablaEncabezado">Actividad</th>
+                </tr>
+                <tr>
+                    <td class="TablaDato">Lunes</td>
+                    <td class="TablaDato">Estudiar</td>
+                </tr>
+                <tr>
+                    <td class="TablaDato">Martes</td>
+                    <td class="TablaDato">Jugar</td>
+                </tr>
+                <tr>
+                    <td class="TablaDato">Miércoles</td>
+                    <td class="TablaDato">Estudiar</td>
+                </tr>
+            </table>
+        </section>
 
-        <!-- Tabla -->
-        <h2 class="Subtitulo">Mi Horario</h2>
-        <table class="TablaHorario">
-            <tr>
-                <th class="TablaEncabezado">Día</th>
-                <th class="TablaEncabezado">Actividad</th>
-            </tr>
-            <tr>
-                <td class="TablaDato">Lunes</td>
-                <td class="TablaDato">Estudiar</td>
-            </tr>
-            <tr>
-                <td class="TablaDato">Martes</td>
-                <td class="TablaDato">Jugar</td>
-            </tr>
-            <tr>
-                <td class="TablaDato">Miércoles</td>
-                <td class="TablaDato">Estudiar</td>
-            </tr>
-        </table>
-
-        <!-- Sección de Saludo Personalizado -->
-        <div class="ContenedorSaludo">
-            <h2 class="Subtitulo">¡Saludo Personalizado!</h2>
-            <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre aquí" class="CampoTexto">
-            <button class="BotonSaludo" onclick="saludarUsuario()">Saludar</button>
-            <p id="mensajeSaludo"></p>
-        </div>
-
-        <!-- Botón de interacción -->
-        <div class="ContenedorBoton">
+        <section class="ContenedorBoton">
             <button class="BotonInteraccion" onclick="showAlert()">Haz clic aquí</button>
-        </div>
+        </section>
     </main>
 
-    <!-- Pie de página -->
     <footer class="PieDePagina">
-        <p>&copy; 2024 Mi Página Web Mejorada Gabs</p>
+        <p>&copy; 2024 Mi Página Web Moderna - Gabs</p>
     </footer>
 
     <script src="js/scripts.js"></script>

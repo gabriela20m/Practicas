@@ -1,75 +1,89 @@
 /* Estilo general del cuerpo */
-.FondoPrincipal {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #eaeaea;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Modo oscuro */
+/* Modo Oscuro */
 body.dark-mode {
-    background-color: #121212;
-    color: #f0f8ff;
-}
-
-body.dark-mode .Encabezado {
-    background-color: #333;
-    color: #f0f8ff;
-}
-
-body.dark-mode .BotonLista,
-body.dark-mode button.BotonInteraccion,
-body.dark-mode .BotonSaludo {
-    background-color: #555;
-    color: #f0f8ff;
-}
-
-body.dark-mode .ItemSubLista {
-    background-color: #444;
-}
-
-body.dark-mode footer.PieDePagina {
-    background-color: #1c1c1c;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 /* Estilos del encabezado */
 .Encabezado {
-    background-color: #ff7f50;
+    background-color: #0d6efd;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    position: relative;
 }
 
 .TituloPrincipal {
-    font-size: 2.5em;
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 2px;
 }
 
 .BotonModoOscuro {
-    margin-top: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
     padding: 10px 20px;
-    background-color: #333;
-    color: #f0f8ff;
+    background-color: #6c757d;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .BotonModoOscuro:hover {
-    background-color: #555;
+    background-color: #5a6268;
 }
 
 /* Estilo para el contenedor principal */
 .ContenidoPrincipal {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-/* Estilo para los párrafos */
-.ParrafoIntroduccion,
-.ParrafoInformacion {
+/* Estilos para la sección de saludo personalizado */
+.ContenedorSaludo {
+    margin: 30px 0;
+}
+
+.CampoTexto {
+    padding: 15px;
     font-size: 1.2em;
-    margin: 20px 0;
+    border: 2px solid #0d6efd;
+    border-radius: 5px;
+    width: 70%;
+    max-width: 350px;
+    margin-bottom: 10px;
+}
+
+.BotonSaludo {
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.BotonSaludo:hover {
+    background-color: #0b5ed7;
+}
+
+.MensajeSaludo {
+    font-size: 1.5em;
+    margin-top: 20px;
 }
 
 /* Estilos para la lista de hobbies */
@@ -77,39 +91,45 @@ body.dark-mode footer.PieDePagina {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .BotonLista {
-    background-color: #ff7f50;
+    background-color: #0d6efd;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1.2em;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .BotonLista:hover {
-    background-color: #e6735a;
+    background-color: #0b5ed7;
 }
 
 .SubLista {
     list-style-type: none;
     padding: 0;
-    display: none; /* Asegúrate de que el JS funcione para mostrar/ocultar */
+    display: none;
+    background-color: #f8f9fa;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
 }
 
 .ItemSubLista {
     margin: 5px 0;
-    padding: 5px;
-    background-color: #ffe4c4;
+    padding: 10px;
+    background-color: #f8f9fa;
     border-radius: 5px;
+    border-bottom: 1px solid #ddd;
 }
 
 /* Estilo del enlace */
 .EnlaceExterno {
-    color: #008b8b;
+    color: #0d6efd;
     text-decoration: none;
 }
 
@@ -120,104 +140,87 @@ body.dark-mode footer.PieDePagina {
 /* Estilo de la imagen */
 .ImagenFavorita {
     display: block;
-    margin: 20px auto;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 30px auto;
+    border: 4px solid #0d6efd;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .ImagenFavorita:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo del video */
-video.VideoFavorito {
+.VideoFavorito {
     display: block;
-    margin: 20px auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 30px auto;
+    border: 4px solid #0d6efd;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-video.VideoFavorito:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.VideoFavorito:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de la tabla */
-table.TablaHorario {
+.TablaHorario {
     width: 80%;
-    margin: 20px auto;
+    margin: 30px auto;
     border-collapse: collapse;
-    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-th.TablaEncabezado,
-td.TablaDato {
-    padding: 10px;
-    border: 1px solid #ccc;
+.TablaHorario th, .TablaHorario td {
+    border: 1px solid #ddd;
+    padding: 15px;
     text-align: center;
 }
 
-th.TablaEncabezado {
-    background-color: #ff7f50;
+.TablaHorario th {
+    background-color: #0d6efd;
     color: white;
+    font-weight: bold;
 }
 
-td.TablaDato {
-    background-color: #f5f5f5;
+.TablaHorario td {
+    background-color: #f8f9fa;
 }
 
-/* Estilo para el contenedor de saludo personalizado */
-.ContenedorSaludo {
-    margin: 20px 0;
-}
-
-.CampoTexto {
-    padding: 10px;
-    font-size: 1.2em;
-    border: 2px solid #ff7f50;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 300px;
-}
-
-.BotonSaludo {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ff7f50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.BotonSaludo:hover {
-    background-color: #e6735a;
-}
-
-/* Estilo para el botón de interacción */
-.ContenedorBoton {
-    margin: 20px 0;
-}
-
+/* Estilo del botón de interacción */
 .BotonInteraccion {
-    background-color: #4CAF50;
+    display: block;
+    padding: 15px 30px;
+    background-color: #0d6efd;
     color: white;
-    padding: 15px 32px;
-    font-size: 16px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 1.5em;
+    margin: 30px auto;
+    transition: background-color 0.3s;
 }
 
 .BotonInteraccion:hover {
-    background-color: #45a049;
+    background-color: #0b5ed7;
 }
 
-/* Estilo del pie de página */
+/* Estilos del pie de página */
 .PieDePagina {
-    background-color: #333;
+    background-color: #212529;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
+
+/* Añadir espacio inferior para evitar solapamiento con el pie de página fijo */
+body {
+    padding-bottom: 70px;
+}
+
