@@ -21,6 +21,7 @@ body.dark-mode {
     text-align: center;
     padding: 30px;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .TituloPrincipal {
@@ -29,6 +30,7 @@ body.dark-mode {
     letter-spacing: 2px;
 }
 
+/* Botón Modo Oscuro */
 .BotonModoOscuro {
     position: absolute;
     top: 15px;
@@ -39,11 +41,12 @@ body.dark-mode {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .BotonModoOscuro:hover {
     background-color: #5a6268;
+    transform: scale(1.05);
 }
 
 /* Estilo para el contenedor principal */
@@ -53,7 +56,7 @@ body.dark-mode {
 }
 
 /* Estilos para la sección de saludo personalizado */
-.ContenedorSaludo {
+.SeccionSaludo {
     margin: 30px 0;
 }
 
@@ -65,6 +68,12 @@ body.dark-mode {
     width: 70%;
     max-width: 350px;
     margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+.CampoTexto:focus {
+    border-color: #0056b3;
+    outline: none;
 }
 
 .BotonSaludo {
@@ -74,16 +83,18 @@ body.dark-mode {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .BotonSaludo:hover {
     background-color: #0b5ed7;
+    transform: scale(1.05);
 }
 
 .MensajeSaludo {
     font-size: 1.5em;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 /* Estilos para la lista de hobbies */
@@ -102,11 +113,12 @@ body.dark-mode {
     font-size: 1.2em;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .BotonLista:hover {
     background-color: #0b5ed7;
+    transform: scale(1.05);
 }
 
 .SubLista {
@@ -117,6 +129,7 @@ body.dark-mode {
     width: 80%;
     max-width: 400px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .ItemSubLista {
@@ -125,19 +138,25 @@ body.dark-mode {
     background-color: #f8f9fa;
     border-radius: 5px;
     border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
 }
 
-/* Estilo del enlace */
+.ItemSubLista:hover {
+    background-color: #e2e6ea;
+}
+
+/* Estilos para enlaces */
 .EnlaceExterno {
     color: #0d6efd;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .EnlaceExterno:hover {
     text-decoration: underline;
 }
 
-/* Estilo de la imagen */
+/* Estilos para imágenes */
 .ImagenFavorita {
     display: block;
     margin: 30px auto;
@@ -151,76 +170,61 @@ body.dark-mode {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo del video */
+/* Estilos para videos */
 .VideoFavorito {
     display: block;
     margin: 30px auto;
     border: 4px solid #0d6efd;
     border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.VideoFavorito:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos de la tabla */
+/* Estilos para tablas */
 .TablaHorario {
     width: 80%;
+    max-width: 600px;
     margin: 30px auto;
     border-collapse: collapse;
+    background-color: #f8f9fa;
     border-radius: 8px;
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.TablaHorario th, .TablaHorario td {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
-}
-
-.TablaHorario th {
+.TablaEncabezado {
     background-color: #0d6efd;
     color: white;
-    font-weight: bold;
+    padding: 12px;
+    text-align: left;
 }
 
-.TablaHorario td {
-    background-color: #f8f9fa;
+.TablaDato {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Estilo del botón de interacción */
-.BotonInteraccion {
-    display: block;
-    padding: 15px 30px;
+/* Estilo para el pie de página */
+.PieDePagina {
     background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para botones de interacción */
+.BotonInteraccion {
+    background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1.5em;
-    margin: 30px auto;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .BotonInteraccion:hover {
-    background-color: #0b5ed7;
+    background-color: #218838;
+    transform: scale(1.05);
 }
-
-/* Estilos del pie de página */
-.PieDePagina {
-    background-color: #212529;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Añadir espacio inferior para evitar solapamiento con el pie de página fijo */
-body {
-    padding-bottom: 70px;
-}
-

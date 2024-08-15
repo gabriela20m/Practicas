@@ -9,7 +9,7 @@
 <body class="FondoPrincipal">
     <header class="Encabezado">
         <h1 class="TituloPrincipal">¡Hola, Mundo!</h1>
-        <button class="BotonModoOscuro" onclick="toggleDarkMode()">Modo Oscuro</button>
+        <button class="BotonModoOscuro" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
     </header>
 
     <main class="ContenidoPrincipal">
@@ -25,21 +25,21 @@
         <section>
             <h2 class="Subtitulo">Mis Hobbies</h2>
             <div class="ContenedorListas">
-                <button class="BotonLista" onclick="toggleList('leer')">Leer</button>
+                <button class="BotonLista" onclick="toggleList('leer')">📚 Leer</button>
                 <ul id="leer" class="SubLista">
                     <li class="ItemSubLista">Escuchar música</li>
                     <li class="ItemSubLista">Leer</li>
                     <li class="ItemSubLista">Bailar</li>
                 </ul>
 
-                <button class="BotonLista" onclick="toggleList('programar')">Programar</button>
+                <button class="BotonLista" onclick="toggleList('programar')">💻 Programar</button>
                 <ul id="programar" class="SubLista">
                     <li class="ItemSubLista">Python</li>
                     <li class="ItemSubLista">JavaScript</li>
                     <li class="ItemSubLista">HTML/CSS</li>
                 </ul>
 
-                <button class="BotonLista" onclick="toggleList('jugar')">Jugar</button>
+                <button class="BotonLista" onclick="toggleList('jugar')">🎮 Jugar</button>
                 <ul id="jugar" class="SubLista">
                     <li class="ItemSubLista">Minecraft</li>
                     <li class="ItemSubLista">Hay Day</li>
@@ -68,27 +68,31 @@
         <section>
             <h2 class="Subtitulo">Mi Horario</h2>
             <table class="TablaHorario">
-                <tr>
-                    <th class="TablaEncabezado">Día</th>
-                    <th class="TablaEncabezado">Actividad</th>
-                </tr>
-                <tr>
-                    <td class="TablaDato">Lunes</td>
-                    <td class="TablaDato">Estudiar</td>
-                </tr>
-                <tr>
-                    <td class="TablaDato">Martes</td>
-                    <td class="TablaDato">Jugar</td>
-                </tr>
-                <tr>
-                    <td class="TablaDato">Miércoles</td>
-                    <td class="TablaDato">Estudiar</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th class="TablaEncabezado">Día</th>
+                        <th class="TablaEncabezado">Actividad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="TablaDato">Lunes</td>
+                        <td class="TablaDato">Estudiar</td>
+                    </tr>
+                    <tr>
+                        <td class="TablaDato">Martes</td>
+                        <td class="TablaDato">Jugar</td>
+                    </tr>
+                    <tr>
+                        <td class="TablaDato">Miércoles</td>
+                        <td class="TablaDato">Estudiar</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
         <section class="ContenedorBoton">
-            <button class="BotonInteraccion" onclick="showAlert()">Haz clic aquí</button>
+            <button class="BotonInteraccion" onclick="showAlert()">✨ Haz clic aquí</button>
         </section>
     </main>
 

@@ -1,5 +1,6 @@
+// Función para mostrar u ocultar listas
 function toggleList(id) {
-    var element = document.getElementById(id);
+    const element = document.getElementById(id);
     if (element.style.display === "block") {
         element.style.display = "none";
     } else {
@@ -7,14 +8,17 @@ function toggleList(id) {
     }
 }
 
+// Función para mostrar una alerta cuando se hace clic en el botón
 function showAlert() {
-    alert("¡Has hecho clic en el botón!");
+    alert("Bienvenidos a mi pagina mejorada");
 }
 
+// Función para alternar entre modo claro y oscuro
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 }
 
+// Función para saludar al usuario
 function saludarUsuario() {
     const nombre = document.getElementById('nombreUsuario').value;
     const mensaje = document.getElementById('mensajeSaludo');
